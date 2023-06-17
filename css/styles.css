@@ -24,10 +24,11 @@ ul {
 }
 
 .container {
-  width: 1158px;
+  /* width: 1158px; */
+  width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding: 0 15px;
+  /* padding: 0 15px; */
 
   /* temprorary */
   /* outline: 2px solid tomato; */
@@ -106,7 +107,7 @@ body {
 }
 
 .site-nav {
-  display: flex;
+  display: none;
 }
 
 .site-nav > .item {
@@ -179,7 +180,7 @@ body {
 /* address */
 
 .contact {
-  display: flex;
+  display: none;
   align-items: center;
 }
 
@@ -192,7 +193,7 @@ body {
 }
 
 .address {
-  list-style: none;
+  /* list-style: none; */
   font-style: normal;
   margin-left: auto;
 }
@@ -287,21 +288,29 @@ body {
 
 /* hero */
 
+.close {
+  display: block;
+  width: 32px;
+  height: 20px;
+  background-color: tomato;
+  margin: 24px;
+}
+
 .hero {
   text-align: center;
   padding-top: 188px;
   padding-bottom: 188px;
-
-  display: block;
-  max-width: 1440px;
-  min-height: 600px;
-  margin-right: auto;
-  margin-left: auto;
+  /* 
+  display: block; */
+  width: 100%;
+  /* min-height: 600px; */
+  /* margin-right: 54px;
+  margin-left: 54px; */
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/bgim.jpg);
+    url(../images/mob-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -311,14 +320,16 @@ body {
   color: var(--primary-white);
   font-style: normal;
   font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   text-align: center;
-  margin-bottom: 48px;
-  max-width: 496px;
+  align-items: center;
+  margin-bottom: 72px;
+  max-width: 320px;
   margin-right: auto;
   margin-left: auto;
+  text-transform: capitalize;
 }
 .section-title {
   color: var(--title-text-color);
@@ -327,12 +338,11 @@ body {
 /* adventages */
 
 .adventages {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .advent {
-  display: flex;
   justify-content: center;
 }
 
@@ -341,7 +351,7 @@ body {
 }
 
 .svg-adv {
-  display: flex;
+  display: none;
   content: "";
   height: 112px;
   background-color: var(--team-bg);
@@ -360,7 +370,7 @@ body {
 }
 
 .advent > .adventage-item:not(:last-child) {
-  margin-right: 24px;
+  margin-bottom: 72px;
 }
 
 .list {
@@ -373,22 +383,24 @@ body {
 
 .adventages-title {
   color: var(--title-text-color);
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 24px;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   text-align: left;
   margin-bottom: 8px;
+  text-align: center;
 }
 
 .adventages .text {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
 }
 /* What are we doing */
 
 .doo {
+  display: none;
   padding-bottom: 120px;
   padding-top: 0;
 }
@@ -427,9 +439,9 @@ body {
 }
 
 .team {
-  background-color: var(--team-bg);
-  padding-top: 120px;
-  padding-bottom: 120px;
+  /* background-color: var(--team-bg); */
+  padding-top: 96px;
+  padding-bottom: 96px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -453,13 +465,17 @@ body {
 .team .card {
   background-color: var(--primary-white);
   border-radius: 0px 0px 4px 4px;
-  flex-basis: calc((100% - 3 * 24px) / 4);
+  /* flex-basis: calc((100% - 3 * 24px) / 4); */
+  width: 264px;
+  height: 428px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  /* margin-left: 82px;
+  margin-right: 82px; */
 }
 
 .team .card:not(:last-child) {
-  margin-right: 24px;
+  margin-bottom: 72px;
 }
 
 .n_and_p {
@@ -485,18 +501,20 @@ body {
 /* Custoners */
 
 .cust-section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+  /* margin: -16px; */
 }
 
 .custom {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
 }
 
 .cust {
-  width: calc((100% - 120px) / 6);
+  width: calc((100% - 16px) / 2);
   height: 88px;
+  margin-bottom: 72px;
 }
 
 .cust-link {
@@ -872,7 +890,7 @@ textarea::placeholder {
   border: 2px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
   margin-right: 8px;
-  border: 1px solid rgba(46, 47, 66, 0.4);  
+  border: 1px solid rgba(46, 47, 66, 0.4);
 
   align-items: center;
   justify-content: center;
@@ -941,21 +959,24 @@ textarea::placeholder {
   display: block;
   width: 264px;
   justify-content: space-evenly;
-  margin-right: 120px;
+  margin-bottom: 72px;
 }
 
 .foot-site {
   background-color: var(--title-text-color);
   color: var(--footer-text-color);
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 98px;
+  padding-bottom: 96px;
   display: flex;
 
   justify-content: center;
 }
 
 .logo-footer {
-  display: inline-block;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   color: var(--primty-brand);
   text-transform: uppercase;
@@ -965,13 +986,7 @@ textarea::placeholder {
   font-size: 18px;
   line-height: 1.17;
   letter-spacing: 0.03em;
-  margin-bottom: 16px;
-}
-
-.foot-h {
-  margin-bottom: 16px;
-  color: var(--primary-white);
-  line-height: 1.5;
+  margin-bottom: 18px;
 }
 
 .foot-cont {
@@ -986,6 +1001,23 @@ textarea::placeholder {
 .foot-text {
   max-width: 264px;
   font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.social-media {
+  display: inline-block;
+  flex-wrap: wrap;
+  margin-bottom: 72px;
+}
+
+.foot-h {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 16px;
+  color: var(--primary-white);
   line-height: 1.5;
 }
 
@@ -993,6 +1025,7 @@ textarea::placeholder {
   display: flex;
   padding: 0;
   gap: 24px;
+  margin-top: 8px;
 }
 
 .socmed-cont {
@@ -1037,6 +1070,8 @@ textarea::placeholder {
 
 .socmed-item {
   display: flex;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0;
   gap: 16px;
 }
@@ -1066,18 +1101,20 @@ textarea::placeholder {
 .mailing-list {
   /* outline: 1px solid tomato; */
 
-  display: flex;
+  display: block;
   gap: 24px;
 }
 
-.mail-podpis {
+/* .mail-podpis {
   margin-left: 80px;
-}
+} */
 
 .e-mail {
   /* width: 100%; */
   height: 40px;
   width: 264px;
+
+  margin-bottom: 16px;
 
   border: 1px solid var(--primary-white);
   border-radius: 4px;
@@ -1092,9 +1129,8 @@ textarea::placeholder {
   line-height: 1.5;
   letter-spacing: 0.04em;
 
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15)); 
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
-
 
 input::placeholder {
   color: var(--primary-white);
@@ -1110,6 +1146,8 @@ input::placeholder {
   align-items: center;
   padding: 8px 24px;
   gap: 16px;
+  margin-left: auto;
+  margin-right: auto;
 
   background-color: var(--primty-brand);
   color: var(--primary-white);
@@ -1133,3 +1171,259 @@ input::placeholder {
   align-items: center;
 }
 
+/* mobilka */
+
+@media screen and (min-width: 428px) {
+  .hero {
+    padding-top: 112px;
+    padding-bottom: 112px;
+  }
+
+  .container {
+    width: 396px;
+    align-items: center;
+  }
+
+  .team-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .team > .container {
+    width: 264px;
+  }
+
+  .foot-cont {
+    width: 398px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 767px) {
+    /* cust */
+    .cust-section > .container {
+      width: 396px;
+    }
+
+    .custom {
+      justify-content: center;
+    }
+
+    .cust:nth-last-child(-n + 2) {
+      margin-bottom: 0;
+    }
+
+    .cust:not(:nth-child(2n)) {
+      margin-right: 16px;
+    }
+
+    .foot-h {
+      width: 100%;
+    }
+  }
+}
+
+/* tablet */
+
+@media screen and (min-width: 768px) {
+  .close {
+    display: none;
+  }
+
+  /* general */
+
+  .container {
+    width: 736px;
+  }
+
+  /* head */
+
+  .site-nav {
+    display: flex;
+  }
+
+  .contact {
+    display: block;
+  }
+
+  /* hero */
+
+  .hero-title {
+    text-transform: none;
+    font-size: 56px;
+    line-height: 1.07;
+    max-width: 496px;
+    margin-bottom: 36px;
+  }
+
+  /* adventages */
+
+  .advent {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .adventages-title {
+    text-align: left;
+  }
+
+  /* team */
+
+  .team > .container {
+    width: 552px;
+  }
+
+  .card:not(:nth-child(2n)) {
+    margin-right: 24px;
+  }
+
+  /* footer */
+
+  .foot-site > .container {
+    width: 552px;
+  }
+
+  .foot-cont {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .address .mailing-list {
+    display: flex;
+    margin-right: auto;
+  }
+
+  .foot-h {
+    display: inline-block;
+  }
+
+  .logo-footer {
+    display: inline-block;
+  }
+
+  .foot {
+    margin-right: 24px;
+  }
+
+  .mailing-list {
+    display: flex;
+  }
+
+  .socmed-item {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  @media screen and (max-width: 1439px) {
+    .contact > .item {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 1.17;
+      color: var(--general-text-color);
+    }
+
+    .adventage-item .text {
+      width: 356px;
+    }
+
+    .adventage-item:not(:nth-child(2n)) {
+      margin-right: 24px;
+    }
+
+    /* cust */
+
+    .cust-section > .container {
+      width: 552px;
+    }
+
+    .cust {
+      width: calc((100% - 48px) / 3);
+    }
+
+    .cust:nth-last-child(-n + 3) {
+      margin-bottom: 0;
+    }
+
+    .cust:not(:nth-child(3n)) {
+      margin-right: 24px;
+    }
+  }
+}
+
+/* desktop */
+
+@media screen and (min-width: 1440px) {
+  .contact {
+    display: flex;
+  }
+
+  .hero {
+    padding-top: 188px;
+    padding-bottom: 188px;
+
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/bgim.jpg);
+  }
+
+  .hero-title {
+    margin-bottom: 48px;
+  }
+
+  .container {
+    width: 1158px;
+  }
+
+  .svg-adv {
+    display: flex;
+  }
+
+  .advent > .adventage-item:not(:last-child) {
+    margin-right: 24px;
+  }
+
+  .doo {
+    display: flex;
+  }
+
+  .team > .container {
+    width: 100%;
+  }
+
+  .card:not(:last-child) {
+    margin-right: 24px;
+  }
+
+  .cust {
+    width: calc((100% - 120px) / 6);
+  }
+
+  .cust:not(:last-child) {
+    margin-right: 24px;
+  }
+
+  .foot-site > .container {
+    width: 100%;
+  }
+
+  .foot {
+    margin-right: 120px;
+    margin-bottom: 0;
+  }
+
+  .social-media {
+    margin-right: 80px;
+    margin-bottom: 0;
+  }
+
+  .foot-cont {
+    display: flex;
+    align-items: baseline;
+  }
+}
