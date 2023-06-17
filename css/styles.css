@@ -366,8 +366,7 @@ body {
 }
 
 .adventage-item {
-  flex-basis: calc((100% - 3 * 24px) / 4);
-  padding: 16px;
+  flex-basis: calc((100% - 24px) / 2);
 }
 
 .advent > .adventage-item:not(:last-child) {
@@ -1407,6 +1406,11 @@ input::placeholder {
 
   .svg-adv {
     display: flex;
+  }
+
+  .adventage-item {
+    flex-basis: calc((100% - 3 * 24px) / 4);
+    padding: 16px;
   }
 
   .advent > .adventage-item:not(:last-child) {
