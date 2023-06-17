@@ -95,7 +95,7 @@ body {
 
 .pg-hd {
   display: flex;
-  width: 1158px;
+  width: 100%;
   margin: 0 auto;
   align-items: center;
 }
@@ -367,6 +367,7 @@ body {
 
 .adventage-item {
   flex-basis: calc((100% - 3 * 24px) / 4);
+  padding: 16px;
 }
 
 .advent > .adventage-item:not(:last-child) {
@@ -449,6 +450,8 @@ body {
 
 .team-list {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .team-name {
@@ -508,7 +511,11 @@ body {
 
 .custom {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .cust {
@@ -990,8 +997,14 @@ textarea::placeholder {
 }
 
 .foot-cont {
+  /* display: flex;
+  align-items: baseline; */
+
+  width: 398px;
   display: flex;
-  align-items: baseline;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo-footer .web {
@@ -1184,21 +1197,33 @@ input::placeholder {
     align-items: center;
   }
 
-  .team-list {
+  .custom {
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+  }
+
+  .custom:not(:nth-child(2n)) {
+    margin-right: 16px;
   }
 
   .team > .container {
     width: 264px;
   }
 
+  .team-list {
+    flex-wrap: wrap;
+  }
+
   .foot-cont {
-    width: 398px;
+    /* width: 398px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
+
+    display: flex;
+    align-items: baseline;
   }
 
   @media screen and (max-width: 767px) {
