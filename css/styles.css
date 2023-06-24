@@ -1297,6 +1297,26 @@ input::placeholder {
     line-height: 1.2;
   }
 
+  .mob-contact .menu-mob:hover,
+  .mob-contact .menu-mob:focus {
+    color: var(--primty-brand);
+    margin-bottom: 40px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.72px;
+  }
+
+  .mob-contact .menu-mail:hover,
+  .mob-contact .menu-mail:focus {
+    color: var(--primty-brand);
+    margin-top: 40px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.72px;
+  }
+
   .mob-contact .link {
     display: block;
     text-decoration: none;
