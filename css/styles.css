@@ -301,8 +301,8 @@ body {
 
 .hero {
   text-align: center;
-  padding-top: 188px;
-  padding-bottom: 188px;
+  padding-top: 112px;
+  padding-bottom: 112px;
   /* 
   display: block; */
   width: 100%;
@@ -366,10 +366,6 @@ body {
   justify-content: center;
   border-radius: 4px;
   margin-bottom: 8px;
-}
-
-.advent > .adventage-item:not(:last-child) {
-  margin-bottom: 72px;
 }
 
 .list {
@@ -438,7 +434,7 @@ body {
 }
 
 .team {
-  /* background-color: var(--team-bg); */
+  background-color: var(--team-bg);
   padding-top: 96px;
   padding-bottom: 96px;
   display: flex;
@@ -475,7 +471,7 @@ body {
   margin-right: 82px; */
 }
 
-.team .card:not(:last-child) {
+.team .card:nth-child(-n + 2) {
   margin-bottom: 72px;
 }
 
@@ -723,7 +719,7 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
 
-  width: 408px;
+  width: 100%;
   min-height: 584px;
 
   background: #fcfcfc;
@@ -928,14 +924,22 @@ textarea::placeholder {
   color: var(--primty-brand);
 }
 
+.but {
+  display: flex;
+  justify-content: center;
+}
+
 .send {
-  display: block;
+  display: flex;
   background-color: var(--primty-brand);
   color: var(--primary-white);
 
-  position: absolute;
+  align-items: center;
+  justify-content: center;
+
+  /* position: absolute;
   right: 120px;
-  bottom: 24px;
+  bottom: 24px; */
 
   min-width: 169px;
   height: 56px;
@@ -1217,7 +1221,7 @@ input::placeholder {
 
   .menu-modal > .container {
     /* width: 100%; */
-    max-width: 396px;
+    /* max-width: 396px; */
     height: 100%;
     padding-right: 60px;
     padding-left: 40px;
@@ -1229,6 +1233,8 @@ input::placeholder {
   .mob-menu {
     width: 100%;
     position: relative;
+    padding-top: 80px;
+    padding-bottom: 40px;
   }
 
   .site-nav {
@@ -1236,11 +1242,10 @@ input::placeholder {
   }
 
   .site-nav-mob {
-    padding-top: 80px;
     display: block;
   }
 
-  .site-nav-mob .item {
+  .site-nav-mob .item:not(:first-child) {
     padding-top: 24px;
   }
 
@@ -1260,6 +1265,7 @@ input::placeholder {
     letter-spacing: 0.72px;
     line-height: 1.11;
     padding-bottom: 0;
+    padding-top: 0;
   }
 
   .site-nav-mob .current-link::after {
@@ -1392,6 +1398,12 @@ input::placeholder {
   }
 
   @media screen and (max-width: 767px) {
+    /* advent */
+
+    .advent > .adventage-item:nth-child(-n + 2) {
+      margin-bottom: 72px;
+    }
+
     /* cust */
     .cust-section > .container {
       width: 396px;
@@ -1507,22 +1519,22 @@ input::placeholder {
 
   .hero {
     background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
-    url(../images/tabl-bg.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/tabl-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   @media (min-resolution: 2dppx) {
     .hero {
       background-image: linear-gradient(
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-      ),
-      url(../images/tabl-bg-2x.jpg);
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/tabl-bg-2x.jpg);
     }
   }
 
@@ -1582,6 +1594,10 @@ input::placeholder {
   .socmed-item {
     margin-right: 0;
     margin-left: 0;
+  }
+
+  .modal {
+    width: 408px;
   }
 
   @media screen and (max-width: 1439px) {
@@ -1664,7 +1680,6 @@ input::placeholder {
 
   .adventage-item {
     flex-basis: calc((100% - 3 * 24px) / 4);
-    padding: 16px;
   }
 
   .advent > .adventage-item:not(:last-child) {
