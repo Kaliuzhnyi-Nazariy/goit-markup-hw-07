@@ -351,6 +351,9 @@ body {
 
 .adventages ul {
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 72px 24px;
 }
 
 .svg-adv {
@@ -505,7 +508,8 @@ body {
 
 .custom {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin-right: auto;
@@ -1400,9 +1404,9 @@ input::placeholder {
   @media screen and (max-width: 767px) {
     /* advent */
 
-    .advent > .adventage-item:nth-child(-n + 2) {
+    /* .advent > .adventage-item:nth-child(-n + 2) {
       margin-bottom: 72px;
-    }
+    } */
 
     /* cust */
     .cust-section > .container {
@@ -1540,6 +1544,10 @@ input::placeholder {
 
   /* adventages */
 
+  .adventages ul {
+    flex-direction: row;
+  }
+
   .advent {
     display: flex;
     flex-wrap: wrap;
@@ -1610,13 +1618,17 @@ input::placeholder {
       color: var(--general-text-color);
     }
 
+    .contact > .item:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
     .adventage-item .text {
       width: 356px;
     }
 
-    .adventage-item:not(:nth-child(2n)) {
+    /* .adventage-item:not(:nth-child(2n)) {
       margin-right: 24px;
-    }
+    } */
 
     /* cust */
 
@@ -1678,6 +1690,11 @@ input::placeholder {
     display: flex;
   }
 
+  .adventages {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
   .adventage-item {
     flex-basis: calc((100% - 3 * 24px) / 4);
   }
@@ -1686,12 +1703,38 @@ input::placeholder {
     margin-right: 24px;
   }
 
+  .adventages-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.4px;
+  }
+
+  .adventages .text {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.32px;
+
+    color: var(--general-text-color);
+  }
+
   .doo {
     display: flex;
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
 
   .team > .container {
     width: 100%;
+  }
+
+  .team .card:nth-child(-n + 2) {
+    margin-bottom: 0;
+  }
+
+  .team {
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
 
   .card:not(:last-child) {
@@ -1700,6 +1743,12 @@ input::placeholder {
 
   .cust {
     width: calc((100% - 120px) / 6);
+    margin-bottom: 0;
+  }
+
+  .cust-section {
+    padding-top: 120px;
+    margin-bottom: 120px;
   }
 
   .cust:not(:last-child) {
