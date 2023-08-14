@@ -352,6 +352,7 @@ body {
 .adventages ul {
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   gap: 72px 24px;
 }
@@ -1695,6 +1696,10 @@ input::placeholder {
     padding-bottom: 120px;
   }
 
+  .adventages ul {
+    flex-wrap: nowrap;
+  }
+
   .adventage-item {
     flex-basis: calc((100% - 3 * 24px) / 4);
   }
@@ -1711,7 +1716,7 @@ input::placeholder {
   }
 
   .adventages .text {
-    font-size: 16px;
+    font-size: 12px;
     line-height: 1.5;
     letter-spacing: 0.32px;
 
